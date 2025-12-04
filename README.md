@@ -1,0 +1,2 @@
+Esta es una página web de aprendizaje de REACT.JS, sin fines de lucro, realizada en el ámbito de los cursos de capacitación que dicta el Gobierno de la Ciudad de Buenos Aires a través del programa Talento Tech. 
+Los derechos de las imágenes utilizadas corresponden a sus respectivo creadores.  

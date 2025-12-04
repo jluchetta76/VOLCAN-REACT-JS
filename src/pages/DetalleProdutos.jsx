@@ -1,0 +1,61 @@
+import { Link, useParams, useLocation } from "react-router-dom";
+import styled from 'styled-components';
+
+
+const ProductoDetalle = () => {
+ 
+    const { id } = useParams();
+    const location = useLocation();
+    const producto = location.state?.producto;
+ 
+    return(
+
+        <>
+
+            <h2>Detalles del Producto</h2>
+            <hr/>
+            <ul>
+
+                <li key={producto.id}>
+                    {producto.nombre}
+                    <br />
+                    <br />
+                    <p><strong>Descripción: </strong>{producto.descripcion}</p>
+                    <p>Precio: ${producto.precio}</p>
+                    <img src={producto.avatar} alt={producto.nombre} width="30%" />
+                </li>
+
+            </ul>
+
+            <hr />
+
+            <Link to={`/productos`}>
+
+                    <BotonEstilizado>Volver</BotonEstilizado>
+                    
+            </Link>
+
+        </>
+
+    );
+
+}; export default ProductoDetalle;
+
+
+const BotonEstilizado = styled.button`
+
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+
+
+  &:hover {
+    background: #31312eff;
+    color: white;
+    }
+`;
